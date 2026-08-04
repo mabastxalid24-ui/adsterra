@@ -2,7 +2,7 @@
 <html lang="ku">
 <head>
     <meta charset="UTF-8">
-    <title>Test Video Player</title>
+    <title>Test Video Player (No Ads)</title>
     <style>
         body {
             background-color: #111;
@@ -24,23 +24,23 @@
             overflow: hidden;
             background: #000;
         }
-        iframe {
+        video {
             width: 100%;
             height: 100%;
-            border: none;
+            outline: none;
         }
     </style>
 </head>
 <body>
 
-    <h1>تاقیکردنەوەی لێدانی ڤیدیۆ (Embed Test)</h1>
+    <h1>تاقیکردنەوەی پلەیەری بێ ڕیکلام (Direct MP4)</h1>
 
     <div class="player-container">
-        <iframe src="https://www.xnxx.com/embedframe/kmcefmbaebb" 
-                frameborder="0" 
-                scrolling="no" 
-                allowfullscreen="allowfullscreen">
-        </iframe>
+        <!-- بەکارهێنانی تاگی video لە شوێنی iframe -->
+        <video controls autoplay playsinline>
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            پێگەڕەکەت پشتگیری ئەم پلەیەرە ناکات.
+        </video>
     </div>
 
 </body>
