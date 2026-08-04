@@ -43,13 +43,15 @@
 
     <script>
         var video = document.getElementById('video');
-        var videoSrc = 'https://o6.9xbud.com/hls/YToyOntzOjY6ImhlYWRlciI7YToyOntpOjA7czo2OToicmVmZXJlcjogaHR0cHM6Ly93d3cucG9ybmh1Yi5jb20vdmlld192aWRlby5waHA_dmlld2tleT02ODc1ZTNmYWM2ODc5IjtpOjE7czo2MjoidXNlci1hZ2VudDogTW96aWxsYS81LjAgKENocm9taXVtU3R5bGVQbGF0Zm9ybSkgQ29iYWx0L1ZlcnNpb24iO31zOjM6InVybCI7czoxNDA6Imh0dHBzOi8vaXYtaC5waG5jZG4uY29tL2pkdmdFSFh3TEFYWC1jUGFhUWZjOURZTEpaST0sMTc4NTg2MjYyMi9obHMvYzYyNTEvdmlkZW9zLzIwMjUwNy8xNS8xNTg0NTY3NS80ODBQXzIwMDBLXzE1ODQ1Njc1Lm1wNC9pbmRleC12MS1hMS5tM3U4Ijt9/dbaa5642d01f119f8077d04e10bf86b6-1785873425?ext=mpeg&customName=Johnny+Sins+-+Picked+Up+a+Slutty+Blonde+at+the+Club+and+Fucked+Her+All+Night_480';
+        var videoSrc = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
 
         if (Hls.isSupported()) {
             var hls = new Hls();
             hls.loadSource(videoSrc);
             hls.attachMedia(video);
         } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = videoSrc;
+        } else {
             video.src = videoSrc;
         }
     </script>
