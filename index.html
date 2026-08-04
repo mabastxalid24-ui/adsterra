@@ -2,9 +2,7 @@
 <html lang="ku">
 <head>
     <meta charset="UTF-8">
-    <title>Test Video Player (HLS Stream)</title>
-    <!-- لۆدکردنی کتێبخانەی HLS.js بۆ پشتگیری لێنکی m3u8 -->
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <title>Test Video Player</title>
     <style>
         body {
             background-color: #111;
@@ -35,26 +33,15 @@
 </head>
 <body>
 
-    <h1>تاقیکردنەوەی پلەیەری بێ ڕیکلام (HLS)</h1>
+    <h1>تاقیکردنەوەی پلەیەری بێ ڕیکلام</h1>
 
     <div class="player-container">
-        <video id="video" controls playsinline></video>
+        <!-- بەکارهێنانی تاگی videoی ڕاستەوخۆ کە لەسەر Safariی ئایفۆن بێ کێشە کار دەکات -->
+        <video controls playsinline preload="metadata">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            پێگەڕەکەت پشتگیری ئەم پلەیەرە ناکات.
+        </video>
     </div>
-
-    <script>
-        var video = document.getElementById('video');
-        var videoSrc = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
-
-        if (Hls.isSupported()) {
-            var hls = new Hls();
-            hls.loadSource(videoSrc);
-            hls.attachMedia(video);
-        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            video.src = videoSrc;
-        } else {
-            video.src = videoSrc;
-        }
-    </script>
 
 </body>
 </html>
