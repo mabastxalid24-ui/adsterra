@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Test</title>
 
-    <!-- Adsterra Popunder Script -->
-    <script src="https://pl30693295.effectivecpmnetwork.com/69/19/20/691920fa8eef99e6a4e9de8ba3e03171.js"></script>
-
     <style>
         body {
             background-color: #111;
@@ -29,7 +26,6 @@
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
         }
-        /* گونجاندنی iframe لەگەڵ قەبارەی containerەکەی */
         .player-container iframe {
             width: 100%;
             height: 100%;
@@ -48,6 +44,23 @@
             allowfullscreen>
         </iframe>
     </div>
+
+    <script>
+        // لێنکە ڕاستەوخۆکەی Adsterra (Direct Link) لەم نێوانە دابنێ
+        const adsterraDirectLink = "https://www.highrevenuegate.com/your-direct-link-here";
+
+        let hasOpenedAd = false;
+
+        // کاتێک بەکارهێنەر لە هەر شوێنێکی لاپەڕەکە کلیک دەکات
+        window.addEventListener('click', function() {
+            if (!hasOpenedAd) {
+                // ڕیکلامەکە لە تەبێکی تەواو نوێدا دەکاتەوە
+                window.open(adsterraDirectLink, '_blank');
+                // بەمەش سایتی خۆت بە کراوەیی لە شوێنی خۆی دەمێنێتەوە و ناوەستێت
+                hasOpenedAd = true; 
+            }
+        });
+    </script>
 
 </body>
 </html>
