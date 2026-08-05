@@ -18,6 +18,7 @@
             font-family: system-ui, -apple-system, sans-serif;
         }
         .player-container {
+            position: relative;
             width: 90%;
             max-width: 600px;
             aspect-ratio: 16 / 9;
@@ -32,6 +33,17 @@
             border: 0;
             display: block;
         }
+        /* تەبەقەی ڕوون بۆ بەدەست هێنانی یەکەم کلیک */
+        .ad-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            cursor: pointer;
+            background: transparent;
+        }
     </style>
 </head>
 <body>
@@ -39,26 +51,24 @@
     <h3 style="margin-bottom: 15px;">تاقیکردنەوەی پلەیەر</h3>
 
     <div class="player-container">
+        <!-- تەبەقەی ڕوون -->
+        <div id="adOverlay" class="ad-overlay"></div>
+        
         <iframe 
             src="https://simply.tubepress.io/embed/busty-milf-dee-williams-takes-bbc-anal-from-sean-michaels" 
             allowfullscreen>
         </iframe>
     </div>
 
+    <!-- Scriptی Popunderی Adsterra -->
+    <script src="https://pl30693295.effectivecpmnetwork.com/69/19/20/691920fa8eef99e6a4e9de8ba3e03171.js"></script>
+
     <script>
-        // لێنکە ڕاستەوخۆکەی Adsterra (Direct Link) لەم نێوانە دابنێ
-        const adsterraDirectLink = "https://www.highrevenuegate.com/your-direct-link-here";
+        const overlay = document.getElementById('adOverlay');
 
-        let hasOpenedAd = false;
-
-        // کاتێک بەکارهێنەر لە هەر شوێنێکی لاپەڕەکە کلیک دەکات
-        window.addEventListener('click', function() {
-            if (!hasOpenedAd) {
-                // ڕیکلامەکە لە تەبێکی تەواو نوێدا دەکاتەوە
-                window.open(adsterraDirectLink, '_blank');
-                // بەمەش سایتی خۆت بە کراوەیی لە شوێنی خۆی دەمێنێتەوە و ناوەستێت
-                hasOpenedAd = true; 
-            }
+        // لە یەکەم کلیکی بەکارهێنەر لەسەر پلەیەرەکە، تەبەقەکە لادەبرێت
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
         });
     </script>
 
