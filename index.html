@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Test</title>
+    <title>Shorts Video Test</title>
 
     <style>
         body {
@@ -20,8 +20,8 @@
         .player-container {
             position: relative;
             width: 90%;
-            max-width: 600px;
-            aspect-ratio: 16 / 9;
+            max-width: 360px; /* گونجاندنی پانییەکەی بۆ ڤیدیۆی ستونی */
+            aspect-ratio: 9 / 16; /* ڕێژەی ستونی بۆ Shorts */
             background: #000;
             border-radius: 12px;
             overflow: hidden;
@@ -39,8 +39,8 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            width: 170px; /* پان بوونی شوێنی دوگمەکەی یوتوب */
-            height: 55px;  /* بەرزایی دوگمەکە */
+            width: 170px;
+            height: 55px;
             z-index: 10;
             background: transparent;
         }
@@ -48,15 +48,15 @@
 </head>
 <body>
 
-    <h3 style="margin-bottom: 15px;">تاقیکردنەوەی پلەیەر</h3>
+    <h3 style="margin-bottom: 15px;">تاقیکردنەوەی Shorts</h3>
 
     <div class="player-container">
         <!-- ئەم بەشە کلیکی دوگمەی Watch on YouTube پەک دەخات -->
         <div class="bottom-blocker"></div>
 
         <iframe 
-            src="https://www.youtube.com/embed/BfFVorulC4c?modestbranding=1&rel=0" 
-            title="YouTube video player" 
+            src="https://www.youtube.com/embed/6rXYgfa4KlA?modestbranding=1&rel=0" 
+            title="YouTube Shorts player" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" 
             allowfullscreen>
