@@ -33,27 +33,6 @@
             border: 0;
             display: block;
         }
-        /* تەبەقەی ڕوون بۆ بەدەست هێنانی یەکەم کلیک */
-        .ad-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 999;
-            cursor: pointer;
-            background: transparent;
-        }
-        /* داپۆشینی بەشی سەرەوەی iframeەکە بۆ ڕێگریکردن لە کلیکی ناوی ڤیدیۆ/لینکەکان */
-        .top-blocker {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            z-index: 10;
-            background: transparent;
-        }
     </style>
 </head>
 <body>
@@ -61,12 +40,6 @@
     <h3 style="margin-bottom: 15px;">تاقیکردنەوەی پلەیەر</h3>
 
     <div class="player-container">
-        <!-- تەبەقەی ڕوون بۆ Adsterra -->
-        <div id="adOverlay" class="ad-overlay"></div>
-        
-        <!-- داپۆشەری سەرەوە بۆ بلۆککردنی کلیک لەسەر ناونیشانی ناو iframe -->
-        <div class="top-blocker"></div>
-
         <iframe 
             src="https://www.youtube.com/embed/BfFVorulC4c?si=h-7CFLAhaTFetHZY" 
             title="YouTube video player" 
@@ -75,17 +48,6 @@
             allowfullscreen>
         </iframe>
     </div>
-
-    <!-- Scriptی Popunderی Adsterra -->
-    <script src="https://pl30693295.effectivecpmnetwork.com/69/19/20/691920fa8eef99e6a4e9de8ba3e03171.js"></script>
-
-    <script>
-        const overlay = document.getElementById('adOverlay');
-
-        overlay.addEventListener('click', function() {
-            overlay.style.display = 'none';
-        });
-    </script>
 
 </body>
 </html>
