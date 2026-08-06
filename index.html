@@ -33,6 +33,17 @@
             border: 0;
             display: block;
         }
+
+        /* بەربەست لەسەر دوگمەی Watch on YouTube لە بەشی ڕاستی خوارەوە */
+        .bottom-blocker {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 170px; /* پان بوونی شوێنی دوگمەکەی یوتوب */
+            height: 55px;  /* بەرزایی دوگمەکە */
+            z-index: 10;
+            background: transparent;
+        }
     </style>
 </head>
 <body>
@@ -40,8 +51,11 @@
     <h3 style="margin-bottom: 15px;">تاقیکردنەوەی پلەیەر</h3>
 
     <div class="player-container">
+        <!-- ئەم بەشە کلیکی دوگمەی Watch on YouTube پەک دەخات -->
+        <div class="bottom-blocker"></div>
+
         <iframe 
-            src="https://www.youtube.com/embed/BfFVorulC4c?si=h-7CFLAhaTFetHZY" 
+            src="https://www.youtube.com/embed/BfFVorulC4c?modestbranding=1&rel=0" 
             title="YouTube video player" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" 
